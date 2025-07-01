@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }} - Resume</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #2e6c80; }
+        section { margin-bottom: 20px; }
+        hr { border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p>Email: {{ email }} | Phone: {{ phone }}<br>
+    LinkedIn: {{ linkedin }} | GitHub: {{ github }}</p>
+
+    <hr>
+    <section>
+        <h2>Profile Summary</h2>
+        <p>{{ summary }}</p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <p>{{ education }}</p>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <p>{{ experience }}</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <p>{{ skills }}</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <p>{{ projects }}</p>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <p>{{ certifications }}</p>
+    </section>
+</body>
+</html>

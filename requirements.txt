@@ -1,0 +1,7 @@
+streamlit
+openai
+PyPDF2
+python-dotenv
+spacy
+jinja2
+pdfkit

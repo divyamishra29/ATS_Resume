@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }} - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 1px solid #ccc;
+        }
+        .contact {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 25px;
+        }
+        ul {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <div class="contact">
+        <p>Email: {{ email }} | Phone: {{ phone }}</p>
+        <p>LinkedIn: {{ linkedin }} | GitHub: {{ github }}</p>
+    </div>
+
+    <section><h2>Profile Summary</h2><p>{{ summary }}</p></section>
+    <section><h2>Education</h2><p>{{ education | replace('\n', '<br>') }}</p></section>
+    <section><h2>Experience</h2><p>{{ experience | replace('\n', '<br>') }}</p></section>
+    <section><h2>Skills</h2><ul>{% for skill in skills.splitlines() %}<li>{{ skill }}</li>{% endfor %}</ul></section>
+    <section><h2>Projects</h2><p>{{ projects | replace('\n', '<br>') }}</p></section>
+    <section><h2>Certifications</h2><p>{{ certifications | replace('\n', '<br>') }}</p></section>
+</body>
+</html>
